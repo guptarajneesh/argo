@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: raj-hello-world
+  name: raj-hello-world
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: raj-hello-world
+  template:
+    metadata:
+      labels:
+        app: raj-hello-world
+    spec:
+      containers:
+      - image: guptarajneesh2010/raj-hello-world
+        name: raj-hello-world
